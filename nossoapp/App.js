@@ -11,7 +11,8 @@ export default function App() {
   );
 }
 
-// Your mother is mine
+// Your mother is mine //
+// Alteração maluca da cabeça //
 
 const styles = StyleSheet.create({
   container: {
