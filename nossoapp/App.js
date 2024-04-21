@@ -10,6 +10,8 @@ export default function App() {
   );
 }
 
+// Your mother is mine
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
