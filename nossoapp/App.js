@@ -8,6 +8,7 @@ export default function App() {
       <Text>Tom nao é, mudei de ideia</Text>
       <Text>Sim era uma propaganda, o tom é gato</Text>
       <text>NAO TOM NAAAAAAAAAAAAAAAOOOOO</text>
+      O MEU P** ESTA DURO
       <StatusBar style="auto" />
     </View>
   );
