@@ -5,6 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Tom é gato, e isso não é uma propaganda</Text>
+      <Text>Tom nao é, mudei de ideia</Text>
       <StatusBar style="auto" />
     </View>
   );
