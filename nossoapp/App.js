@@ -7,9 +7,9 @@ export default function App() {
       <Text>Tom é gato, e isso não é uma propaganda</Text>
       <Text>Tom nao é, mudei de ideia</Text>
       <Text>Sim era uma propaganda, o tom é gato</Text>
-      <text>NAO TOM NAAAAAAAAAAAAAAAOOOOO</text>
-      MEU P** TA MOLE
-      SUSHI É BOM, TOM É RUIM
+      <text>NAO TOM NAOOOOO</text>
+      MEU P** TA MUITO MOLE
+      APENAS MOLE
       <StatusBar style="auto" />
     </View>
   );
@@ -22,6 +22,9 @@ export default function App() {
 // Tesão 5
 // Tesão π
 // Tesão Oishii 🍣🥢
+
+// ALHO PORÓ
+// MAMA MINHA MAMA
 
 ashashda
 aisi
