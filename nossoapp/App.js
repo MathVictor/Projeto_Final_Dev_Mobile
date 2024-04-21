@@ -15,6 +15,7 @@ export default function App() {
 
 // Your mother is mine //
 // Alteração maluca da cabeça //
+// Testão
 
 const styles = StyleSheet.create({
   container: {
