@@ -19,7 +19,9 @@ export default function App() {
 // Testão
 // Tesão
 // Tesão 2
-aisiajsida
+// Tesão 3
+
+aisiajsidag
 const styles = StyleSheet.create({
   container: {
     flex: 1,
