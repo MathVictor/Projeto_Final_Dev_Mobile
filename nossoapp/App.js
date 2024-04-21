@@ -21,8 +21,11 @@ export default function App() {
 // Tesão 2
 // Tesão 3
 // Tesão 5
+// Tesão π
+// Tesão Oishii 🍣🥢
 
-aisiajsid
+ashashda
+aisi
 const styles = StyleSheet.create({
   container: {
     flex: 1,
