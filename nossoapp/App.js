@@ -15,7 +15,9 @@ export default function App() {
 // Your mother is mine //
 // Alteração maluca da cabeça //
 // Testão
-
+// Tesão
+// Tesão 2
+aisiajsida
 const styles = StyleSheet.create({
   container: {
     flex: 1,
