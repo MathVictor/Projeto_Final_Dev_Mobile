@@ -8,8 +8,8 @@ export default function App() {
       <Text>Tom nao é, mudei de ideia</Text>
       <Text>Sim era uma propaganda, o tom é gato</Text>
       <text>NAO TOM NAAAAAAAAAAAAAAAOOOOO</text>
-      O MEU P** ESTA DURO
       MEU P** TA MOLE
+      SUSHI É BOM, TOM É RUIM
       <StatusBar style="auto" />
     </View>
   );
@@ -19,8 +19,6 @@ export default function App() {
 // Alteração maluca da cabeça //
 // Testão
 // Tesão
-// Tesão 2
-// Tesão 3
 // Tesão 5
 
 aisiajsid
