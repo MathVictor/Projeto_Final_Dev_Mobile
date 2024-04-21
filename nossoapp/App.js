@@ -6,6 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Tom é gato, e isso não é uma propaganda</Text>
       <Text>Tom nao é, mudei de ideia</Text>
+      <Text>Sim era uma propaganda, o tom é gato</Text>
       <StatusBar style="auto" />
     </View>
   );
