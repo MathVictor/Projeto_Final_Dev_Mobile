@@ -7,21 +7,16 @@ export default function App() {
       <Text>Tom é gato, e isso não é uma propaganda</Text>
       <Text>Tom nao é, mudei de ideia</Text>
       <Text>Sim era uma propaganda, o tom é gato</Text>
-      <text>NAO TOM NAAAAAAAAAAAAAAAOOOOO</text>
+      <text>NAO TOM NAAAAAAAAAAO</text>
       MEU P** TA MOLE
       SUSHI É BOM, TOM É RUIM
+      TOM É MAMAS SIIIIIIM
       <StatusBar style="auto" />
     </View>
   );
 }
 
-// Your mother is mine //
-// Alteração maluca da cabeça //
-// Testão
-// Tesão
-// Tesão 5
-// Tesão π
-// Tesão Oishii 🍣🥢
+// EU SOU O DONO DOS COMENTS SEU MERDA
 
 ashashda
 aisi
