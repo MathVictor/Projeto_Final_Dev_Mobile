@@ -12,8 +12,18 @@ const Stack = createStackNavigator();
 // Screens
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
 
+// Fonts
+import{useFonts} from 'expo-font';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'AveriaLibre-Regular': require('./assets/fonts/AveriaLibre-Regular.ttf'),
+    'AveriaLibre-Bold': require('./assets/fonts/AveriaLibre-Bold.ttf'),
+    'AveriaLibre-BoldItalic': require('./assets/fonts/AveriaLibre-BoldItalic.ttf'),
+    'AveriaLibre-Italic': require('./assets/fonts/AveriaLibre-Italic.ttf'),
+    'AveriaLibre-Light': require('./assets/fonts/AveriaLibre-Light.ttf'),
+    'AveriaLibre-LightItalic': require('./assets/fonts/AveriaLibre-LightItalic.ttf'),
+  });
   return (
    /*<View style={styles.container}>
       <Text>Teste do Teste</Text>
@@ -22,7 +32,7 @@ export default function App() {
     <Provider store={store}>
           <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false, 
-              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre-Regular'}, 
+              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'sexo'}, 
               headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="AgradecimentoParticipacao">
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
             </Stack.Navigator>
