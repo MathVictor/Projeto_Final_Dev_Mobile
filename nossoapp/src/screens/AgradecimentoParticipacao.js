@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
         fontFamily: 'AveriaLibre-Regular',
         fontSize: 30,
         color: 'white',
-        margin: 15
+        margin: 15,
+        textAlign: 'center'
     }
 });

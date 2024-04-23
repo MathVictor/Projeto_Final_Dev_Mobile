@@ -8,6 +8,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const Stack = createStackNavigator();
 
 // Screens
+import Home from './src/screens/Home';
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
 
 // Fonts
@@ -30,8 +31,9 @@ export default function App() {
     <Provider store={store}>
           <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false, 
-              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'sexo'}, 
-              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="AgradecimentoParticipacao">
+              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre-Regular'}, 
+              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Home">
+                <Stack.Screen name="Home" component={Home}/>
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
             </Stack.Navigator>
           </NavigationContainer>
