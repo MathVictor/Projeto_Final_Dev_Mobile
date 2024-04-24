@@ -1,27 +1,51 @@
 import { View, Text, Image, Pressable, StyleSheet } from 'react-native';
+import {useState} from 'react';
 import { TextInput } from 'react-native-gesture-handler';
 
 export default function App() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [inputError, setInputError] = useState('');
+  const regexEmail = /^[A-Za-z0-9.+_-]+@[A-Za-z0-9.-]+\.[a-z]{2,}$/
+
+  const formsVerification = () => {
+    if (regexEmail.test(email) == true && password != '') {
+
+      let regEmail = email;
+      let regPassword = password;
+      setInputError(' ');
+
+    } else {
+
+      if (regexEmail.test(email) == false && password == '') {
+        setInputError('E-mail e senha inválidos');
+      } else if (password == '') {
+        setInputError('Senha é campo obrigatório');
+      } else if (regexEmail.test(email) == false) {
+        setInputError('E-mail inválido');
+      }
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={styles.ViewTitle}>
         <Text style={styles.TitleText}>Satisfying.you</Text>
-        <Image source={require("../../assets/icons/smile.png")} style={styles.TitleImage} />
+        <Image source={require("./assets/smile.png")} style={styles.TitleImage} />
       </View>
       
       <View style={styles.ViewFormEmail}>
         <Text style={styles.FormEmailText}>Email</Text>
-        <TextInput style={styles.FormEmail} placeholder="jurandir.pereira@hotmail.com" placeholderTextColor='#8b8b8b'/>
+        <TextInput style={styles.FormEmail } placeholder="jurandir.pereira@hotmail.com" placeholderTextColor='#8b8b8b'value={email} onChangeText={setEmail}/>
       </View>
 
       <View style={styles.ViewFormPassword}>
         <Text style={styles.FormPasswordText}>Senha</Text>
-        <TextInput style={styles.FormPassword} placeholder="*********" placeholderTextColor='#8b8b8b'/>
-        <Text style={styles.InvalidText}>E-mail e/ou senha inválidos</Text>
+        <TextInput style={styles.FormPassword} placeholder="*********" placeholderTextColor='#8b8b8b' value={password} onChangeText={setPassword} />
+        <Text style={styles.InvalidText}>{inputError}</Text>
       </View>
 
       <View style={styles.ViewButtonLogin}>
-        <Pressable style={styles.ButtonLogin}>
+        <Pressable style={styles.ButtonLogin} onPress={formsVerification}>
           <Text style={styles.ButtonLoginText}>Entrar</Text>
         </Pressable>
       </View>
@@ -81,7 +105,8 @@ const styles = StyleSheet.create({
     fontFamily: 'AveriaLibre-Regular',
     justifyContent: "center",
     marginTop: 3,
-    padding: 4
+    padding: 4,
+    paddingLeft: '4%'
   },
 
   FormEmailText: {
@@ -101,7 +126,8 @@ const styles = StyleSheet.create({
     fontFamily: 'AveriaLibre-Regular',
     justifyContent: "center",
     marginTop: 3,
-    padding: 4
+    padding: 4,
+    paddingLeft: '4%'
   },
   FormPasswordText: {
     fontSize: 16,
@@ -123,8 +149,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#49B976",
     marginTop: '3%',
-    paddingTop: '0.5%',
-    paddingBottom: '0.5%'
+    paddingTop: '1.5%',
+    paddingBottom: '1.5%'
   },
   ButtonLoginText: {
     fontSize: 16,
