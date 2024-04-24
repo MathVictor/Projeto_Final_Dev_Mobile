@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     fontFamily: 'AveriaLibre-Regular',
     justifyContent: "center",
     marginTop: 3,
-    padding: 4,
+    padding: 2,
     paddingLeft: '4%'
   },
 
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     fontFamily: 'AveriaLibre-Regular',
     justifyContent: "center",
     marginTop: 3,
-    padding: 4,
+    padding: 2,
     paddingLeft: '4%'
   },
   FormPasswordText: {
