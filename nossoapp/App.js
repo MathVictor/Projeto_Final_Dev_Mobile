@@ -12,6 +12,7 @@ import Home from './src/screens/Home';
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
 import Relatorio from './src/screens/Relatorio';
 import CriarConta from './src/screens/CriarConta';
+import AcoesPesquisa from './src/screens/AcoesPesquisa';
 
 // Fonts
 import{useFonts} from 'expo-font';
@@ -39,6 +40,7 @@ export default function App() {
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
                 <Stack.Screen name="Relatorio" component={Relatorio} options={{headerShown: true}}/>
                 <Stack.Screen name="Nova Conta" component={CriarConta} options={{headerShown: true}}/>
+                <Stack.Screen name="AcoesPesquisa" component={AcoesPesquisa} options={{headerShown: true}}/>
             </Stack.Navigator>
           </NavigationContainer>
         </Provider>

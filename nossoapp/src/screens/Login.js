@@ -40,7 +40,7 @@ export default function App() {
 
       <View style={styles.ViewFormPassword}>
         <Text style={styles.FormPasswordText}>Senha</Text>
-        <TextInput style={styles.FormPassword} placeholder="*********" placeholderTextColor='#8b8b8b' value={password} onChangeText={setPassword} />
+        <TextInput style={styles.FormPassword} placeholder="*********" placeholderTextColor='#8b8b8b' value={password} onChangeText={setPassword} secureTextEntry={true}/>
         <Text style={styles.InvalidText}>{inputError}</Text>
       </View>
 
