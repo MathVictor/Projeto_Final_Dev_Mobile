@@ -35,7 +35,7 @@ export default function App() {
             <Stack.Navigator screenOptions={{headerShown: false, 
               headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre-Regular'}, 
               headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Home">
-                <Stack.Screen name="Home" component={Home}/>
+                <Stack.Screen name="Home" component={Home} options={{headerShown: true}}/>
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
             </Stack.Navigator>
           </NavigationContainer>
