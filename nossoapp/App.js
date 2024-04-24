@@ -10,6 +10,7 @@ const Stack = createStackNavigator();
 // Screens
 import Home from './src/screens/Home';
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
+import Relatorio from './src/screens/Relatorio';
 
 // Fonts
 import{useFonts} from 'expo-font';
@@ -31,10 +32,11 @@ export default function App() {
     <Provider store={store}>
           <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false, 
-              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre-Regular'}, 
-              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Home">
+              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre-Regular', width: 'auto'}, 
+              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Relatorio">
                 <Stack.Screen name="Home" component={Home} options={{headerShown: true}}/>
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
+                <Stack.Screen name="Relatorio" component={Relatorio} options={{headerShown: true}}/>
             </Stack.Navigator>
           </NavigationContainer>
         </Provider>
