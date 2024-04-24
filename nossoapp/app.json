@@ -3,7 +3,7 @@
     "name": "nossoapp",
     "slug": "nossoapp",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -27,7 +27,11 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      [
+        "expo-screen-orientation",
+        { "initialOrientation": "DEFAULT" }
+      ]
     ]
   }
 }

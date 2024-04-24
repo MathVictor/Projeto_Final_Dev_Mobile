@@ -1,5 +1,7 @@
-import {View, StyleSheet, Text, ScrollView, Image} from 'react-native';
+import {Dimensions, View, Pressable, StyleSheet, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
 import {useState} from 'react';
+import Icon from 'react-native-vector-icons/Octicons';
+import { TextInput } from 'react-native-gesture-handler';
 
 let docColeta = [
     {
@@ -74,17 +76,28 @@ export default function Home(){
 
     return(
     <View style={styles.View}>
-        git
+        <View style={styles.ViewInputPesquisa}>
+            <Icon style={{marginLeft: 10, marginTop: 2}} name='search' color='#999999' size={18}/>
+            <TextInput style={styles.InputPesquisa} placeholder="Insira o termo de busca..." placeholderTextColor='#8b8b8b'/>
+        </View>
+        <View style={styles.ViewScrollView}>
             <ScrollView horizontal={true}>
                 {docColeta.map((item) => ( 
-                    <View style={styles.Card}>
-                        <Image key={item.id} source={item.imagem} style={styles.ImgCard}/>
-                        <Text key={item.id} style={styles.NameCard}>{item.nome}</Text>
-                        <Text key={item.id} style={styles.DateCard}>{item.data}</Text>
-                        </View>
-                    
+                    <View key={item.id} style={styles.Card}>
+                        <Image source={item.imagem} style={styles.ImgCard}/>
+                        <Text style={styles.NameCard}>{item.nome}</Text>
+                        <Text style={styles.DateCard}>{item.data}</Text>
+                    </View>
                 ))}
             </ScrollView>
+        </View>
+        <View style={styles.ViewButtonPesquisa}>
+            <Pressable style={styles.ButtonPesquisa}>
+                <Text style={styles.ButtonPesquisaText}>NOVA PESQUISA</Text>
+            </Pressable>
+        </View>
+
+
     </View>
     );
 }
@@ -94,20 +107,45 @@ const styles = StyleSheet.create({
         backgroundColor: '#372775',
         flex: 1,
     },
+    ViewInputPesquisa: {
+        flex: 0.1,
+        flexDirection: 'row',
+        backgroundColor: '#ffffff',
+
+        marginTop: 18,
+        marginRight: '3%',
+        marginLeft: '3%',
+        marginBottom: '2.8%',
+
+        paddingLeft: 9,
+        paddingRight: 9,
+        paddingTop: 3,
+        paddingBottom: 3
+    },
+    InputPesquisa: {
+        color: '#8b8b8b',
+        fontFamily: 'AveriaLibre-Regular',
+        justifyContent: "center",
+        marginLeft: 10,
+        marginTop: 3
+    },
+    ViewScrollView: {
+        flex: 0.7,
+    },
     Card: {
         backgroundColor: '#ffffff',
-        width: 271,
-        height: 238,
-        marginLeft: 24.5,
-        marginRight: 24.5,
+        width: Dimensions.get("screen").width * 0.22,
+        height: '100%',
+        marginLeft: 18.5,
+        marginRight: 18.5,
         borderRadius: 10,
-        paddingTop: 26,
+        paddingTop: 18,
         alignItems: "center"
     },
     NameCard: {
         marginTop: 15,
         marginBottom: 3,
-        fontSize: 32,
+        fontSize: 14,
         textAlign: 'center',
         textTransform: 'uppercase',
         fontFamily: 'AveriaLibre-Regular',
@@ -116,10 +154,28 @@ const styles = StyleSheet.create({
     DateCard: {
         color: '#8B8B8B',
         fontFamily: 'AveriaLibre-Regular',
-        fontSize: 16
+        fontSize: 10
     },
     ImgCard: {
-        width: 120,
-        height: 120
+        width: 70,
+        height: 70
+    },
+    ViewButtonPesquisa: {
+        flex: 0.3
+    },
+    ButtonPesquisa: {
+        alignItems: "center",
+        backgroundColor: "#49B976",
+        marginLeft: '3%',
+        marginRight: '3%',
+        marginTop: '3%',
+        paddingTop: '0.5%',
+        paddingBottom: '0.5%'
+    },
+    ButtonPesquisaText: {
+        fontSize: 14,
+        textAlign: 'center',
+        fontFamily: 'AveriaLibre-Regular',
+        color: '#FFFFFF'
     }
 });
