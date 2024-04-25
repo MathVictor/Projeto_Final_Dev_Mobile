@@ -30,7 +30,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.ViewTitle}>
         <Text style={styles.TitleText}>Satisfying.you</Text>
-        <Image source={require("./assets/smile.png")} style={styles.TitleImage} />
+        <Image source={require("../../assets/icons/smile.png")} style={styles.TitleImage} />
       </View>
       
       <View style={styles.ViewFormEmail}>
@@ -52,7 +52,7 @@ export default function App() {
 
       <View style={styles.ViewButtonOthers}>
         <Pressable style={styles.ButtonCreateAccount}>
-          <Text style={styles.ButtonCreateAccountText}>Criar minhna conta</Text>
+          <Text style={styles.ButtonCreateAccountText}>Criar minha conta</Text>
         </Pressable>
         <Pressable style={styles.ButtonForgotPassword}>
           <Text style={styles.ButtonForgotPasswordText}>Esqueci minha senha</Text>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
 
     fontSize: 32,
     textAlign: 'center',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   },
 
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   FormEmail: {
     backgroundColor: '#FFFFFF',
     color: '#8b8b8b',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     justifyContent: "center",
     marginTop: 3,
     padding: 2,
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   FormEmailText: {
     fontSize: 16,
     textAlign: 'left',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   },
 
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   FormPassword: {
     backgroundColor: '#FFFFFF',
     color: '#8b8b8b',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     justifyContent: "center",
     marginTop: 3,
     padding: 2,
@@ -132,13 +132,13 @@ const styles = StyleSheet.create({
   FormPasswordText: {
     fontSize: 16,
     textAlign: 'left',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   },
   InvalidText: {
     fontSize: 13,
     textAlign: 'left',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FD7979'
   },
 
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   ButtonLoginText: {
     fontSize: 16,
     textAlign: 'left',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   },
   ViewButtonOthers: {
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
   ButtonCreateAccountText: {
     fontSize: 16,
     textAlign: 'left',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   },
   ButtonForgotPassword: {
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   ButtonForgotPasswordText: {
     fontSize: 16,
     textAlign: 'left',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   }
 });

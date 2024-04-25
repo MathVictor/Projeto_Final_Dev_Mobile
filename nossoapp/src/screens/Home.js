@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     },
     InputPesquisa: {
         color: '#8b8b8b',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         justifyContent: "center",
         marginLeft: 10,
         marginTop: 3
@@ -148,12 +148,12 @@ const styles = StyleSheet.create({
         fontSize: 14,
         textAlign: 'center',
         textTransform: 'uppercase',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         color: '#3F92C5'
     },
     DateCard: {
         color: '#8B8B8B',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         fontSize: 10
     },
     ImgCard: {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     ButtonPesquisaText: {
         fontSize: 14,
         textAlign: 'center',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         color: '#FFFFFF'
     }
 });

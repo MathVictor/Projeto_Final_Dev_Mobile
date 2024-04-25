@@ -8,17 +8,17 @@ export default function App() {
     <View style={styles.container}>
 
       <TouchableOpacity style={styles.TouchableOption}>
-        <Image source={require("./assets/modificar.png")} style={styles.TitleImage} />
+        <Image source={require("../../assets/icons/modificar.png")} style={styles.TitleImage} />
         <Text style={styles.TitleText}>Modificar</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.TouchableOption}>
-        <Image source={require("./assets/coletar.png")} style={styles.TitleImage} />
+        <Image source={require("../../assets/icons/coletar.png")} style={styles.TitleImage} />
         <Text style={styles.TitleText}>Coletar Dados</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.TouchableOption}>
-        <Image source={require("./assets/relatorio.png")} style={styles.TitleImage} />
+        <Image source={require("../../assets/icons/relatorio.png")} style={styles.TitleImage} />
         <Text style={styles.TitleText}>Relatório</Text>
       </TouchableOpacity>
 
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
 
     fontSize: 18,
     textAlign: 'center',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   },
 

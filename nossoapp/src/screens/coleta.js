@@ -1,7 +1,15 @@
-import{View, StyleSheet} from 'react-native';
-import{useNavigation} from '@react-navigation/native'
+import{View, StyleSheet, Text, Image} from 'react-native';
 
 export default function Coleta(){
-    const navigation = useNavigation();
-    
+    return(
+        <View>
+
+        </View>
+    );
 }
+
+const styles = StyleSheet.create({
+    View:{
+        
+    }
+});

@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     LegendItemText: {
         marginLeft: '3%',
         fontSize: 16,
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         color: '#ffffff'
     }
 });
