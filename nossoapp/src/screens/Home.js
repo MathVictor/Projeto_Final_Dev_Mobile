@@ -2,6 +2,7 @@ import {Dimensions, View, Pressable, StyleSheet, Text, ScrollView, Image, Toucha
 import {useState} from 'react';
 import Icon from 'react-native-vector-icons/Octicons';
 import { TextInput } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 let docColeta = [
     {
@@ -73,7 +74,10 @@ let docColeta = [
 ]
 
 export default function Home(){
-
+    const navigation = useNavigation();
+    const goAcoesPesquisa = () =>{
+        navigation.navigate('AcoesPesquisa');
+    }
     return(
     <View style={styles.View}>
         <View style={styles.ViewInputPesquisa}>
@@ -83,11 +87,13 @@ export default function Home(){
         <View style={styles.ViewScrollView}>
             <ScrollView horizontal={true}>
                 {docColeta.map((item) => ( 
+                    <TouchableOpacity onPress={goAcoesPesquisa}>
                     <View key={item.id} style={styles.Card}>
                         <Image source={item.imagem} style={styles.ImgCard}/>
                         <Text style={styles.NameCard}>{item.nome}</Text>
                         <Text style={styles.DateCard}>{item.data}</Text>
                     </View>
+                    </TouchableOpacity>
                 ))}
             </ScrollView>
         </View>
