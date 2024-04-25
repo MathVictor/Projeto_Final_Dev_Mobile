@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Image, ImageInput, Pressable, StyleSheet } from 'react-native';
 import {useState} from 'react';
 import { TextInput } from 'react-native-gesture-handler';
 
