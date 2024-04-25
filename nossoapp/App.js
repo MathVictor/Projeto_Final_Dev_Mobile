@@ -12,18 +12,22 @@ import Home from './src/screens/Home';
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
 import Relatorio from './src/screens/Relatorio';
 import CriarConta from './src/screens/CriarConta';
+import AcoesPesquisa from './src/screens/AcoesPesquisa';
+import Login from './src/screens/Login';
+import Coleta from './src/screens/Coleta';
+import RecuperacaoSenha from './src/screens/RecuperacaoSenha';
 
 // Fonts
-import{useFonts} from 'expo-font';
+import {useFonts, AveriaLibre_300Light, AveriaLibre_300Light_Italic, AveriaLibre_400Regular, 
+  AveriaLibre_700Bold, AveriaLibre_700Bold_Italic } from '@expo-google-fonts/averia-libre';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    'AveriaLibre-Regular': require('./assets/fonts/AveriaLibre-Regular.ttf'),
-    'AveriaLibre-Bold': require('./assets/fonts/AveriaLibre-Bold.ttf'),
-    'AveriaLibre-BoldItalic': require('./assets/fonts/AveriaLibre-BoldItalic.ttf'),
-    'AveriaLibre-Italic': require('./assets/fonts/AveriaLibre-Italic.ttf'),
-    'AveriaLibre-Light': require('./assets/fonts/AveriaLibre-Light.ttf'),
-    'AveriaLibre-LightItalic': require('./assets/fonts/AveriaLibre-LightItalic.ttf'),
+    AveriaLibre_300Light,
+    AveriaLibre_300Light_Italic,
+    AveriaLibre_400Regular,
+    AveriaLibre_700Bold,
+    AveriaLibre_700Bold_Italic
   });
   return (
    /*<View style={styles.container}>
@@ -33,12 +37,16 @@ export default function App() {
     <Provider store={store}>
           <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false, 
-              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre-Regular', width: 'auto'}, 
-              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Nova Conta">
+              headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre_400Regular', width: 'auto'}, 
+              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Recuperação de senha">
                 <Stack.Screen name="Home" component={Home} options={{headerShown: true}}/>
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
                 <Stack.Screen name="Relatorio" component={Relatorio} options={{headerShown: true}}/>
                 <Stack.Screen name="Nova Conta" component={CriarConta} options={{headerShown: true}}/>
+                <Stack.Screen name="Ações de Pesquisa" component={AcoesPesquisa} options={{headerShown: true}}/>
+                <Stack.Screen name="Login" component={Login}/>
+                <Stack.Screen name="Coleta" component={Coleta}/>
+                <Stack.Screen name="Recuperação de senha" component={RecuperacaoSenha} options={{headerShown: true}}/>
             </Stack.Navigator>
           </NavigationContainer>
         </Provider>

@@ -2,6 +2,7 @@ import {Dimensions, View, Pressable, StyleSheet, Text, ScrollView, Image, Toucha
 import {useState} from 'react';
 import Icon from 'react-native-vector-icons/Octicons';
 import { TextInput } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 let docColeta = [
     {
@@ -73,7 +74,10 @@ let docColeta = [
 ]
 
 export default function Home(){
-
+    const navigation = useNavigation();
+    const goAcoesPesquisa = () =>{
+        navigation.navigate('AcoesPesquisa');
+    }
     return(
     <View style={styles.View}>
         <View style={styles.ViewInputPesquisa}>
@@ -83,11 +87,13 @@ export default function Home(){
         <View style={styles.ViewScrollView}>
             <ScrollView horizontal={true}>
                 {docColeta.map((item) => ( 
+                    <TouchableOpacity onPress={goAcoesPesquisa}>
                     <View key={item.id} style={styles.Card}>
                         <Image source={item.imagem} style={styles.ImgCard}/>
                         <Text style={styles.NameCard}>{item.nome}</Text>
                         <Text style={styles.DateCard}>{item.data}</Text>
                     </View>
+                    </TouchableOpacity>
                 ))}
             </ScrollView>
         </View>
@@ -124,7 +130,7 @@ const styles = StyleSheet.create({
     },
     InputPesquisa: {
         color: '#8b8b8b',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         justifyContent: "center",
         marginLeft: 10,
         marginTop: 3
@@ -148,12 +154,12 @@ const styles = StyleSheet.create({
         fontSize: 14,
         textAlign: 'center',
         textTransform: 'uppercase',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         color: '#3F92C5'
     },
     DateCard: {
         color: '#8B8B8B',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         fontSize: 10
     },
     ImgCard: {
@@ -175,7 +181,7 @@ const styles = StyleSheet.create({
     ButtonPesquisaText: {
         fontSize: 14,
         textAlign: 'center',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         color: '#FFFFFF'
     }
 });

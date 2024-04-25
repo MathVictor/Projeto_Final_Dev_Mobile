@@ -73,14 +73,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         padding: 2,
         paddingLeft: '4%',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
     },
     TextInputTitle: {
+        fontFamily: 'AveriaLibre_400Regular',
         color: 'white'
     },
     ErrorText: {
         color: '#FD7979',
-        fontFamily: 'AveriaLibre-Regular'
+        fontFamily: 'AveriaLibre_400Regular'
     },
     ButtonCadastrar: {
         alignItems: "center",
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
     ButtonCadastrarText: {
         fontSize: 16,
         textAlign: 'left',
-        fontFamily: 'AveriaLibre-Regular',
+        fontFamily: 'AveriaLibre_400Regular',
         color: '#FFFFFF'
     }
 });

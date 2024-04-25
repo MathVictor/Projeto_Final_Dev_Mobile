@@ -1,24 +1,33 @@
 import { Dimensions, View, Text, Image, Pressable, StyleSheet, TouchableOpacity } from 'react-native';
 import {useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
 
-export default function App() {
+export default function App({}) {
+  const navigation = useNavigation();
   const [data, setData] = useState({});
+  const goModificarPesquisa = () => {
 
+  }
+  const goColeta = () => {
+    navigation.navigate('Coleta');
+  }
+  const goRelatorio = () => {
+    navigation.navigate('Relatorio');
+  }
   return (
     <View style={styles.container}>
-
       <TouchableOpacity style={styles.TouchableOption}>
-        <Image source={require("./assets/modificar.png")} style={styles.TitleImage} />
+        <Image source={require("../../assets/icons/modificar.png")} style={styles.TitleImage} />
         <Text style={styles.TitleText}>Modificar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.TouchableOption}>
-        <Image source={require("./assets/coletar.png")} style={styles.TitleImage} />
+      <TouchableOpacity style={styles.TouchableOption} onPress={goColeta}>
+        <Image source={require("../../assets/icons/coletar.png")} style={styles.TitleImage} />
         <Text style={styles.TitleText}>Coletar Dados</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.TouchableOption}>
-        <Image source={require("./assets/relatorio.png")} style={styles.TitleImage} />
+      <TouchableOpacity style={styles.TouchableOption} onPress={goRelatorio}>
+        <Image source={require("../../assets/icons/relatorio.png")} style={styles.TitleImage} />
         <Text style={styles.TitleText}>Relatório</Text>
       </TouchableOpacity>
 
@@ -57,7 +66,7 @@ const styles = StyleSheet.create({
 
     fontSize: 18,
     textAlign: 'center',
-    fontFamily: 'AveriaLibre-Regular',
+    fontFamily: 'AveriaLibre_400Regular',
     color: '#FFFFFF'
   },
 
