@@ -1,29 +1,44 @@
-import{View, StyleSheet, Text, Image, Dimensions} from 'react-native';
+import{View, StyleSheet, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Coleta(){
+    const navigation = useNavigation();
+    const goAgradecimentoParticipacao = () => {
+        navigation.navigate('AgradecimentoParticipacao');
+    }
     return(
         <View style={styles.View}>
             <View style={styles.MainRateView}>
                 <Text style={styles.QuestionText}>O que você achou do Carnaval 2024</Text>
                 <View style={styles.RateView}>
                     <View style={styles.RateIconView}>
-                         <Image style={styles.RateIcon} source={require('../../assets/icons/sad.png')}/>
-                         <Text style={styles.RateText}>Péssimo</Text>
+                        <TouchableOpacity onPress={goAgradecimentoParticipacao}>
+                            <Image style={styles.RateIcon} source={require('../../assets/icons/sad.png')}/>
+                        </TouchableOpacity>
+                        <Text style={styles.RateText}>Péssimo</Text>
                     </View>
                     <View style={styles.RateIconView}>
-                        <Image style={styles.RateIcon} source={require('../../assets/icons/dissatisfied.png')}/>
+                        <TouchableOpacity onPress={goAgradecimentoParticipacao}>
+                            <Image style={styles.RateIcon} source={require('../../assets/icons/dissatisfied.png')}/>
+                        </TouchableOpacity>
                         <Text style={styles.RateText}>Ruim</Text>
                     </View>
                     <View style={styles.RateIconView}>
-                        <Image style={styles.RateIcon} source={require('../../assets/icons/neutral.png')}/>
+                        <TouchableOpacity onPress={goAgradecimentoParticipacao}>
+                            <Image style={styles.RateIcon} source={require('../../assets/icons/neutral.png')}/>
+                        </TouchableOpacity>
                         <Text style={styles.RateText}>Neutro</Text>
                     </View>
                     <View style={styles.RateIconView}>
-                        <Image style={styles.RateIcon} source={require('../../assets/icons/satisfied.png')}/>
+                        <TouchableOpacity onPress={goAgradecimentoParticipacao}>
+                            <Image style={styles.RateIcon} source={require('../../assets/icons/satisfied.png')}/>
+                        </TouchableOpacity>
                         <Text style={styles.RateText}>Bom</Text>
                     </View>
                     <View style={styles.RateIconView}>
-                        <Image style={styles.RateIcon} source={require('../../assets/icons/very_satisfied.png')}/>
+                        <TouchableOpacity onPress={goAgradecimentoParticipacao}>
+                            <Image style={styles.RateIcon} source={require('../../assets/icons/very_satisfied.png')}/>
+                        </TouchableOpacity>
                         <Text style={styles.RateText}>Excelente</Text>
                     </View>
                 </View>
