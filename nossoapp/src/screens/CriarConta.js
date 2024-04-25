@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
         fontFamily: 'AveriaLibre_400Regular',
     },
     TextInputTitle: {
+        fontFamily: 'AveriaLibre_400Regular',
         color: 'white'
     },
     ErrorText: {

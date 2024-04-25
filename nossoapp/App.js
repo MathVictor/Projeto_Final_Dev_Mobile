@@ -15,6 +15,7 @@ import CriarConta from './src/screens/CriarConta';
 import AcoesPesquisa from './src/screens/AcoesPesquisa';
 import Login from './src/screens/Login';
 import Coleta from './src/screens/Coleta';
+import RecuperacaoSenha from './src/screens/RecuperacaoSenha';
 
 // Fonts
 import {useFonts, AveriaLibre_300Light, AveriaLibre_300Light_Italic, AveriaLibre_400Regular, 
@@ -37,14 +38,15 @@ export default function App() {
           <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false, 
               headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre_400Regular', width: 'auto'}, 
-              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Home">
+              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Recuperação de senha">
                 <Stack.Screen name="Home" component={Home} options={{headerShown: true}}/>
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
                 <Stack.Screen name="Relatorio" component={Relatorio} options={{headerShown: true}}/>
                 <Stack.Screen name="Nova Conta" component={CriarConta} options={{headerShown: true}}/>
-                <Stack.Screen name="AcoesPesquisa" component={AcoesPesquisa} options={{headerShown: true}}/>
+                <Stack.Screen name="Ações de Pesquisa" component={AcoesPesquisa} options={{headerShown: true}}/>
                 <Stack.Screen name="Login" component={Login}/>
                 <Stack.Screen name="Coleta" component={Coleta}/>
+                <Stack.Screen name="Recuperação de senha" component={RecuperacaoSenha} options={{headerShown: true}}/>
             </Stack.Navigator>
           </NavigationContainer>
         </Provider>
