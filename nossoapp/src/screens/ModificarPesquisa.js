@@ -61,7 +61,7 @@ export default function App() {
       <View style={styles.ViewFormImage}>
         <Text style={styles.FormImageText}>Imagem</Text>
         <TouchableOpacity style={styles.FormImage}>
-          <Text style={styles.FormImageInside}>Câmera/Galeria de Imagens</Text>
+          <Image style={styles.FormImagePreview} source = {defaultImage} />
         </TouchableOpacity>
         
         
@@ -69,9 +69,15 @@ export default function App() {
 
       <View style={styles.ViewButtonLogin}>
         <Pressable style={styles.ButtonLogin} onPress={() => { nameVerification(); dateVerification(); }}>
-          <Text style={styles.ButtonLoginText}>Entrar</Text>
+          <Text style={styles.ButtonLoginText}>Salvar</Text>
         </Pressable>
       </View>
+
+      <TouchableOpacity style={styles.ViewDelete}>
+          <Image source={require('../../assets/icons/garbage.png')} style={styles.DeleteIcon} />
+          <Text style={styles.DeleteText}>Apagar</Text>
+        </TouchableOpacity>
+
     </View>
   );
 }
@@ -170,11 +176,9 @@ const styles = StyleSheet.create({
     color: '#FFFFFF'
   },
 
-  FormImageInside: {
-    fontSize: 10,
-    textAlign: 'left',
-    fontFamily: 'AveriaLibre-Regular',
-    color: '#939393'
+  FormImagePreview: {
+    width: Dimensions.get("screen").height * 0.12,
+    height: Dimensions.get("screen").height * 0.12
   },
 
   ViewButtonLogin: {
@@ -195,4 +199,24 @@ const styles = StyleSheet.create({
     fontFamily: 'AveriaLibre-Regular',
     color: '#FFFFFF'
   },
+
+  ViewDelete: {
+    position: 'absolute',
+    width: Dimensions.get("screen").width,
+    left: Dimensions.get("screen").width * 0.43,
+    bottom: Dimensions.get("screen").height * 0.04,
+
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  DeleteIcon: {
+    width: Dimensions.get("screen").height * 0.1,
+    height: Dimensions.get("screen").height * 0.1
+  },
+  DeleteText: {
+    fontSize: 12,
+    textAlign: 'left',
+    fontFamily: 'AveriaLibre-Regular',
+    color: '#FFFFFF'
+  }
 });
