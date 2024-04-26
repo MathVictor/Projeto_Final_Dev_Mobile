@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Octicons';
 import { TextInput } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
+
 let docColeta = [
     {
         nome: "SECOMP 2023",

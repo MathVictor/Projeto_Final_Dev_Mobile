@@ -4,9 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Provider } from "react-redux";
 import { store } from "./src/redux/store";
 import { StyleSheet, Text, View } from 'react-native';
-
 const Stack = createStackNavigator();
-
 // Screens
 import Home from './src/screens/Home';
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
@@ -16,7 +14,6 @@ import AcoesPesquisa from './src/screens/AcoesPesquisa';
 import Login from './src/screens/Login';
 import Coleta from './src/screens/Coleta';
 import RecuperacaoSenha from './src/screens/RecuperacaoSenha';
-
 // Fonts
 import {useFonts, AveriaLibre_300Light, AveriaLibre_300Light_Italic, AveriaLibre_400Regular, 
   AveriaLibre_700Bold, AveriaLibre_700Bold_Italic } from '@expo-google-fonts/averia-libre';
@@ -38,7 +35,7 @@ export default function App() {
           <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false, 
               headerTitleStyle: {color: 'white', fontSize: 25, fontFamily: 'AveriaLibre_400Regular', width: 'auto'}, 
-              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Recuperação de senha">
+              headerStyle: {backgroundColor: '#2B1D62', height: 65}}} initialRouteName="Home">
                 <Stack.Screen name="Home" component={Home} options={{headerShown: true}}/>
                 <Stack.Screen name="AgradecimentoParticipacao" component={AgradecimentoParticipacao}/>
                 <Stack.Screen name="Relatorio" component={Relatorio} options={{headerShown: true}}/>
@@ -52,7 +49,6 @@ export default function App() {
         </Provider>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

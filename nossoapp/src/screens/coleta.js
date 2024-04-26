@@ -1,4 +1,4 @@
-import{View, StyleSheet, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
+import{View, StyleSheet, Text, Image, Dimensions, TouchableOpacity, Pressable} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Coleta(){
@@ -6,8 +6,12 @@ export default function Coleta(){
     const goAgradecimentoParticipacao = () => {
         navigation.navigate('AgradecimentoParticipacao');
     }
+    const exitScreen = () => {
+        navigation.navigate('Ações de Pesquisa');
+    }
     return(
         <View style={styles.View}>
+            <Pressable style={styles.invisibleButton} onPress={exitScreen}/>
             <View style={styles.MainRateView}>
                 <Text style={styles.QuestionText}>O que você achou do Carnaval 2024</Text>
                 <View style={styles.RateView}>
@@ -41,6 +45,7 @@ export default function Coleta(){
                         </TouchableOpacity>
                         <Text style={styles.RateText}>Excelente</Text>
                     </View>
+                  
                 </View>
             </View>
         </View>
@@ -81,5 +86,13 @@ const styles = StyleSheet.create({
         fontFamily: 'AveriaLibre_400Regular',
         fontSize: 20,
         marginTop: '5%'
+    },
+    invisibleButton: {
+            display: 'flex',
+            alignSelf: 'flex-end',
+            backgroundColor: '#372775',
+            width: Dimensions.get('screen').width * 0.03,
+            height: Dimensions.get('screen').width * 0.03,
+            marginRight: '2%'
     }
 });
